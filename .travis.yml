@@ -26,7 +26,7 @@ script:
 
   # Push# Assuming DOCKER_PASSWORD and DOCKER_USERNAME are set in the Travis repository settings
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push sudkul/udagram-api-feed:v1
-  - docker push sudkul/udagram-api-user:v1
-  - docker push sudkul/udagram-frontend:v1
-  - docker push sudkul/udagram-reverseproxy:v1
+  - docker push danthedangerman/udagram-api-feed:v1
+  - docker push danthedangerman/udagram-api-user:v1
+  - docker push danthedangerman/udagram-frontend:v1
+  - docker push danthedangerman/udagram-reverseproxy:v1
