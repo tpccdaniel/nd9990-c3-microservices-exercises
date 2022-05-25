@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mono-to-micro
+  labels:
+    app: mono-to-micro
+spec:
+  replicas: 2
+  selector:
+    matchlabels:
+      app: mono-to-micro
+    template:
+      metadata:
+        labels:
+          app: mono-to-micro
+    spec:
+      containers:
+      - name: udagram-reverseproxy
+        image: danthedangerman/udagram-reverseproxy
+        ports:
+        - containerPort: 80
